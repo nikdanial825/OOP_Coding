@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LexiLearn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f0f0f0;
+      color: #454545;
+    }
+
+    header {
+      background-color: #333;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1em;
+      color: #fff;
+    }
+
+    header a {
+      color: #fff;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: #ccc;
+    }
+
+    .container {
+      margin: 0 auto;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      flex-grow: 1;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .search input, .search select, .search button {
+      margin: 0 10px;
+      padding: 15px;
+      font-size: 1.1em;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .search input, .search select {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .search button {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .search button:hover {
+      background-color: #444;
+    }
+
+    .entry {
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .entry p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 1.2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .word-info, .meanings {
+      margin-bottom: 30px;
+      padding: 30px;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+    }
+
+    .word-info h2, .meanings h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .word-info .phonetic {
+      color: #333;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+    }
+
+    .word-info audio {
+      margin-top: 15px;
+    }
+
+    .definitions p, .examples p, .synonyms p, .antonyms p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="favorites.html">Favorites</a>
+  </header>
+
+  <div class="container">
+    <div class="search">
+      <input type="text" id="word" placeholder="Enter a word" />
+      <select id="type">
+        <option value="">All</option>
+        <option value="noun">Noun</option>
+        <option value="pronoun">Pronoun</option>
+        <option value="adjective">Adjective</option>
+        <option value="verb">Verb</option>
+        <option value="adverb">Adverb</option>
+        <option value="preposition">Preposition</option>
+        <option value="conjunction">Conjunction</option>
+        <option value="interjections">Interjections</option>
+      </select>
+      <button onclick="searchWord()">Search</button>
+    </div>
+
+    <main>
+      <div class="entry" id="entryContainer">
+        <p>Welcome to Let"S Learn, your ultimate companion for mastering the art of words! Our dictionary application is designed to enhance your language learning and vocabulary expansion effortlessly.</p>
+        <p>Whether you're a student, writer, or language enthusiast, LexiLearn offers in-depth definitions, examples, and synonyms at your fingertips.</p>
+        <p>With features like part-of-speech filtering, a favorites list for storing your most treasured words, and the ability to add personal notes, LexiLearn revolutionizes the way you engage with language.</p>
+        <p>Dive in and explore the beauty of words with LexiLearn!</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <h4>&copy; 2024 Let"s Learn. All rights reserved.</h4>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
